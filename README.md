@@ -1,47 +1,67 @@
 <div align="center">
-<img alt="Portfolio" src="https://github.com/dillionverma/portfolio/assets/16860528/57ffca81-3f0a-4425-b31d-094f61725455" width="90%">
+  <img alt="Abdallah Atef portfolio preview" src="./public/portfolio-preview.svg" width="90%">
 </div>
 
-# Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdillionverma%2Fportfolio)
+# Abdallah Atef - Portfolio
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+Personal portfolio website for **Abdallah Atef**, a Full Stack Developer based in Giza, Egypt. The site presents my background, work experience, education, technical skills, selected projects, and writing in a clean, responsive interface.
 
-# Features
+## About
 
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+I started programming out of curiosity and a desire to understand how the products I use are built. My path began with C++, moved into frontend development and landing pages, and then expanded into backend development with Node.js, Express, NestJS, and .NET.
 
-# Getting Started Locally
+Today, I enjoy building complete products, learning new technologies, and turning ideas into things that actually work.
 
-1. Clone this repository to your local machine:
+## What is Included
 
-   ```bash
-   git clone https://github.com/dillionverma/portfolio
-   ```
+- Responsive personal homepage with an introduction and About section
+- Work experience and education timeline
+- Technology skills section covering React, Next.js, TypeScript, Node.js, Python, C#, .NET, PostgreSQL, Docker, Kubernetes, Java, and C++
+- Selected projects with descriptions, technologies, and external links
+- MDX-powered blog with individual post pages and pagination
+- Light and dark themes
+- Open Graph images for the website, blog, and blog posts
+- Animated UI details using Motion and Magic UI components
 
-2. Move to the cloned directory
+## Built With
 
-   ```bash
-   cd portfolio
-   ```
+- [Next.js 16](https://nextjs.org/) and React 19
+- TypeScript
+- Tailwind CSS
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Magic UI](https://magicui.design/)
+- Motion
+- Content Collections and MDX
 
-3. Install dependencies:
+## Getting Started
 
-   ```bash
-   pnpm install
-   ```
+### Prerequisites
 
-4. Start the local Server:
+- Node.js 18 or newer
+- npm or pnpm
 
-   ```bash
-   pnpm dev
-   ```
+### Installation
 
-5. Open the [Config file](./src/data/resume.tsx) and make changes
+```bash
+git clone https://github.com/abo3tef/portfolio.git
+cd portfolio
+npm install
+npm run dev
+```
 
-# License
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Licensed under the [MIT license](https://github.com/dillionverma/portfolio/blob/main/LICENSE.md).
+To update the portfolio content, edit the main configuration object in [`src/data/resume.tsx`](./src/data/resume.tsx).
+
+## Available Scripts
+
+| Command         | Description                  |
+| --------------- | ---------------------------- |
+| `npm run dev`   | Start the development server |
+| `npm run build` | Create a production build    |
+| `npm run start` | Start the production server  |
+| `npm run lint`  | Run ESLint                   |
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
