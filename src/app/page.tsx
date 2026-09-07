@@ -8,6 +8,7 @@ import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
+import PhotoGallery from "@/components/section/photo-gallery";
 import { ArrowUpRight } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -52,6 +53,7 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+      <PhotoGallery />
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -114,26 +116,53 @@ export default function Page() {
         </div>
       </section>
       <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-4">
+        <div className="flex min-h-0 flex-col gap-y-5">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">Skills</h2>
+            <div className="flex items-end justify-between gap-4">
+              <h2 className="text-xl font-bold">Core technical skills</h2>
+              <span className="hidden text-xs text-muted-foreground sm:block">
+                {DATA.skillGroups.reduce(
+                  (total, group) => total + group.skills.length,
+                  0,
+                )}{" "}
+                tools
+              </span>
+            </div>
           </BlurFade>
-          <div className="flex flex-wrap gap-2">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade
-                key={skill.name}
-                delay={BLUR_FADE_DELAY * 10 + id * 0.05}
-              >
-                <div className="border bg-background border-border ring-2 ring-border/20 rounded-xl h-8 w-fit px-4 flex items-center gap-2">
-                  {skill.icon && (
-                    <skill.icon className="size-4 rounded overflow-hidden object-contain" />
-                  )}
-                  <span className="text-foreground text-sm font-medium">
-                    {skill.name}
-                  </span>
-                </div>
-              </BlurFade>
-            ))}
+          <div className="divide-y divide-border/70 border-y border-border/70">
+            {DATA.skillGroups.map((group, groupIndex) => {
+              return (
+                <BlurFade
+                  key={group.name}
+                  delay={BLUR_FADE_DELAY * 10 + groupIndex * 0.05}
+                  className="py-5"
+                >
+                  <div className="mb-3 flex items-center gap-2">
+                    <h3 className="text-base font-semibold lowercase">
+                      {group.name}
+                    </h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {group.skills.map((skill) => {
+                      const SkillIcon = skill.icon;
+                      return (
+                        <div
+                          key={skill.name}
+                          className="inline-flex items-center gap-2 rounded-md border border-border/70 bg-muted/60 px-3 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
+                        >
+                          <SkillIcon
+                            className="size-4 shrink-0"
+                            color="default"
+                            aria-hidden
+                          />
+                          {skill.name}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </BlurFade>
+              );
+            })}
           </div>
         </div>
       </section>
