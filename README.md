@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Abdallah Atef portfolio preview" src="./public/portfolio-preview.svg" width="90%">
+  <img alt="Abdallah Atef portfolio preview" src="./public/image.png" width="90%">
 </div>
 
 # Abdallah Atef - Portfolio
