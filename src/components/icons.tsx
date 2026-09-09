@@ -23,6 +23,12 @@ export const Icons = {
       />
     </svg>
   ),
+  mostaql: (props: IconProps) => (
+    <img src="/work/mostaql.png" alt="Mostaql" className={props.className} />
+  ),
+  nafzly: (props: IconProps) => (
+    <img src="/work/nafezly.ico" alt="Nafzly" className={props.className} />
+  ),
   youtube: (props: IconProps) => (
     <svg
       width="32px"

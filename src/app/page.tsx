@@ -9,22 +9,62 @@ import ContactSection from "@/components/section/contact-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import PhotoGallery from "@/components/section/photo-gallery";
+import GithubContributions from "@/components/section/github-contributions";
 import { ArrowUpRight } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
+
+const skillIconColors: Record<string, string> = {
+  "C#": "text-[#9B4F96]",
+  JavaScript: "text-[#F7DF1E]",
+  TypeScript: "text-[#3178C6]",
+  SQL: "text-[#4479A1]",
+  "C++": "text-[#00599C]",
+  "ASP.NET Core": "text-[#512BD4]",
+  "Entity Framework Core": "text-[#512BD4]",
+  "Node.js": "text-[#339933]",
+  "Express.js": "text-[#F7F7F7]",
+  "REST APIs": "text-[#FF6F00]",
+  "WebSockets (Socket.io)": "text-[#25C2A0]",
+  React: "text-[#61DAFB]",
+  "Next.js": "text-foreground",
+  HTML5: "text-[#E34F26]",
+  CSS3: "text-[#1572B6]",
+  "Tailwind CSS": "text-[#06B6D4]",
+  "SQL Server": "text-[#CC2927]",
+  PostgreSQL: "text-[#4169E1]",
+  MongoDB: "text-[#47A248]",
+  Git: "text-[#F05032]",
+  GitHub: "text-foreground",
+  Docker: "text-[#2496ED]",
+  Postman: "text-[#FF6C37]",
+  Vercel: "text-foreground",
+  Netlify: "text-[#00C7B7]",
+  Firebase: "text-[#FFCA28]",
+  Figma: "text-[#F24E1E]",
+  Trello: "text-[#0C66E4]",
+  "VS Code": "text-[#007ACC]",
+  Linux: "text-[#FCC624]",
+  OOP: "text-[#68217A]",
+  "SOLID Principles": "text-[#2563EB]",
+  "Clean Architecture": "text-[#0F766E]",
+  "Design Patterns": "text-[#D97706]",
+  "Data Structures & Algorithms": "text-[#0891B2]",
+  Agile: "text-[#16A34A]",
+};
 
 export default function Page() {
   return (
     <main className="min-h-dvh flex flex-col gap-14 relative">
       <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-8">
+        <div className="mx-auto w-full max-w-4xl space-y-8">
           <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between">
             <div className="gap-2 flex flex-col order-2 md:order-1">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
                 yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
+                text={`Hi, I'm ${DATA.name.split(" ")[0]} 😎`}
               />
               <BlurFadeText
                 className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
@@ -41,6 +81,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <GithubContributions />
       <section id="about">
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
@@ -138,6 +179,10 @@ export default function Page() {
                   className="py-5"
                 >
                   <div className="mb-3 flex items-center gap-2">
+                    <group.icon
+                      className="size-4 text-muted-foreground"
+                      aria-hidden
+                    />
                     <h3 className="text-base font-semibold lowercase">
                       {group.name}
                     </h3>
@@ -151,8 +196,7 @@ export default function Page() {
                           className="inline-flex items-center gap-2 rounded-md border border-border/70 bg-muted/60 px-3 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
                         >
                           <SkillIcon
-                            className="size-4 shrink-0"
-                            color="default"
+                            className={`size-4 shrink-0 ${skillIconColors[skill.name] ?? "text-muted-foreground"}`}
                             aria-hidden
                           />
                           {skill.name}

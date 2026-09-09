@@ -1,7 +1,12 @@
 import { Icons } from "@/components/icons";
 import {
+  Binary,
   Braces,
   Boxes,
+  GitBranch,
+  Kanban,
+  Layers3,
+  ShieldCheck,
   Code2,
   HomeIcon,
   NotebookIcon,
@@ -113,12 +118,12 @@ export const DATA = {
       name: "Concepts",
       icon: Boxes,
       skills: [
-        { name: "OOP", icon: Boxes },
-        { name: "SOLID Principles", icon: Boxes },
-        { name: "Clean Architecture", icon: Workflow },
-        { name: "Design Patterns", icon: Braces },
-        { name: "Data Structures & Algorithms", icon: Code2 },
-        { name: "Agile", icon: Workflow },
+        { name: "OOP", icon: Layers3 },
+        { name: "SOLID Principles", icon: ShieldCheck },
+        { name: "Clean Architecture", icon: Boxes },
+        { name: "Design Patterns", icon: GitBranch },
+        { name: "Data Structures & Algorithms", icon: Binary },
+        { name: "Agile", icon: Kanban },
       ],
     },
   ],
@@ -149,6 +154,18 @@ export const DATA = {
         url: "https://x.com/ela3goz_",
         icon: Icons.x,
 
+        navbar: true,
+      },
+      Mustaql: {
+        name: "Mustaql",
+        url: "https://mostaql.com/u/ela3goz",
+        icon: Icons.mostaql,
+        navbar: true,
+      },
+      Nafzly: {
+        name: "Nafzly",
+        url: "https://nafezly.com/u/Abdullahatef1",
+        icon: Icons.nafzly,
         navbar: true,
       },
       email: {
