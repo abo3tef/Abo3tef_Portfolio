@@ -306,5 +306,31 @@ export const DATA = {
       image: "/work/blood.png",
       video: "",
     },
+    {
+      title: "Portfolio-clint",
+      href: "https://portfolio-clint.vercel.app/",
+      dates: "2025",
+      active: true,
+      description:
+        "Single-page portfolio website built with Next.js App Router and React. Features reusable hero, services, experience, projects, testimonials, and contact sections with animated UI, smooth scrolling, and responsive interactions.",
+      technologies: [
+        "Next.js 15",
+        "React 19",
+        "Tailwind CSS 4",
+        "Framer Motion",
+        "Lenis",
+        "Swiper",
+        "Lucide React",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/abo3tef/Portfolio-clint",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/work/portfolio.png",
+      video: "",
+    },
   ],
 } as const;
