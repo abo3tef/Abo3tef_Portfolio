@@ -48,7 +48,7 @@ export const DATA = {
   url: "#",
   location: "Giza, Egypt",
   locationLink: "https://www.google.com/maps/place/giza",
-  avatarUrl: "/me/profile.jpg",
+  avatarUrl: "/me/profile.png",
   description:
     "Full Stack Developer who enjoys turning ideas into things that actually work.I build, experiment, break, learn, and build again.",
   summary:
